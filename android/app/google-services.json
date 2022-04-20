@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "40070251536",
+    "project_id": "huumirameningredient-1b53f",
+    "storage_bucket": "huumirameningredient-1b53f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40070251536:android:38fdacc43d2e304c9cb695",
+        "android_client_info": {
+          "package_name": "com.example.huumirameningredient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40070251536-bu05btrk7svik3pn0tfmcffvu38vokb6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3QcL5IMIqvxqbm8FgbDejqP1pM31jh3Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40070251536-bu05btrk7svik3pn0tfmcffvu38vokb6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "40070251536-droe0ghliajglr21i3lt4nafvg5pj3m1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "huumiramen.ingredient"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40070251536:android:0699af846e0d866e9cb695",
+        "android_client_info": {
+          "package_name": "com.example.practice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40070251536-bu05btrk7svik3pn0tfmcffvu38vokb6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3QcL5IMIqvxqbm8FgbDejqP1pM31jh3Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40070251536-bu05btrk7svik3pn0tfmcffvu38vokb6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "40070251536-droe0ghliajglr21i3lt4nafvg5pj3m1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "huumiramen.ingredient"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40070251536:android:9c8bdf44af88be8b9cb695",
+        "android_client_info": {
+          "package_name": "huumiramen.ingredient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40070251536-bu05btrk7svik3pn0tfmcffvu38vokb6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3QcL5IMIqvxqbm8FgbDejqP1pM31jh3Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40070251536-bu05btrk7svik3pn0tfmcffvu38vokb6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "40070251536-droe0ghliajglr21i3lt4nafvg5pj3m1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "huumiramen.ingredient"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
