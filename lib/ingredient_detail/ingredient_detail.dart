@@ -206,10 +206,12 @@ class _IngredientDetailState extends State<IngredientDetail> {
                           width: double.infinity,
                           height: 50,
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(data[docName][index]['name']),
                               Text(data[docName][index]['count'].toString()),
-                              Icon(Icons.abc)
+                              Icon(Icons.start)
                             ],
                           )),
                     );

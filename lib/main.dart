@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practice/ingredient_detail/ingredient_detail.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:practice/themeStyle.dart';
@@ -24,6 +24,7 @@ class Practice extends StatefulWidget {
 
 class _PracticeState extends State<Practice> {
   TextEditingController newCategoryNameController = TextEditingController();
+  TextEditingController newPhoneNumberController = TextEditingController();
 
   Future<FirebaseApp> _initialization =
       Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
@@ -49,9 +50,14 @@ class _PracticeState extends State<Practice> {
                               children: [
                                 TextField(
                                   autofocus: true,
-                                  decoration:
-                                      InputDecoration(labelText: "Name"),
+                                  decoration: InputDecoration(labelText: "분류"),
                                   controller: newCategoryNameController,
+                                ),
+                                TextField(
+                                  autofocus: true,
+                                  decoration:
+                                      InputDecoration(labelText: "전화번호"),
+                                  controller: newPhoneNumberController,
                                 ),
                               ],
                             )),
@@ -60,18 +66,24 @@ class _PracticeState extends State<Practice> {
                             child: Text("Cancel"),
                             onPressed: () {
                               newCategoryNameController.clear();
+                              newPhoneNumberController.clear();
                               Navigator.pop(context);
                             },
                           ),
                           TextButton(
                             child: Text("Create"),
                             onPressed: () {
-                              if (newCategoryNameController.text.isNotEmpty) {
+                              if (newCategoryNameController.text.isNotEmpty &&
+                                  newPhoneNumberController.text.isNotEmpty) {
                                 setState(() {
-                                  createDoc(newCategoryNameController.text);
+                                  createDoc(newCategoryNameController.text,
+                                      newPhoneNumberController.text);
                                 });
+                              } else {
+                                AlertDialog(title: Text("모든 칸을 입력해주세요"));
                               }
                               newCategoryNameController.clear();
+                              newPhoneNumberController.clear();
                               Navigator.pop(context);
                             },
                           )
@@ -83,10 +95,11 @@ class _PracticeState extends State<Practice> {
         });
   }
 
-  void createDoc(String title) {
-    FirebaseFirestore.instance
-        .collection('ingredient')
-        .doc()
-        .set({"$title": []});
+  void createDoc(String title, String phoneNum) {
+    FirebaseFirestore.instance.collection('ingredient').doc().set({
+      "$title": [
+        {"name": "연락처", "count": phoneNum}
+      ]
+    });
   }
 }
